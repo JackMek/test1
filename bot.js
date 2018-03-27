@@ -63,7 +63,7 @@ client.on('ready', () => {
 client.on('message', message => {
     if (message.content === 'list') {
        
-            message.reply(listPlayers[i-2] + listPlayers[i-1] + listPlayers[i]);
+            message.reply("Fisrt " + listPlayers[i-2] + listPlayers[i-1] + listPlayers[i]);
       
   	}
 });
