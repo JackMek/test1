@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const channelID = '428119349048639488';
+const channelID = '428140388105322496';
 
 var listPlayers = [
 'Insidious'
