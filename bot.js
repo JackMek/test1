@@ -1,6 +1,5 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const CHANNEL_ID = "428119349048639488";
 
 var listPlayers = [
 'Insidious'
@@ -62,7 +61,7 @@ client.on('ready', () => {
 });
 
 client.on('message', message => {
-    if (message.content === 'l' && message.channel.id === CHANNEL_ID) {
+    if (message.content === 'l' && message.channel.id === CHANNEL_IDc) {
         if (i == lenList+2){
             i = 2;
             message.reply("Possono finalizzare i seguenti utenti: " + listPlayers[i-2] + " , " + listPlayers[i-1] + " , " + listPlayers[i]);
