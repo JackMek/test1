@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const channelBot = bot.channels.get("id", "428119349048639488")
+const channelBot = channels.get("id", "428119349048639488")
 
 var listPlayers = [
 'Insidious'
