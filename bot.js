@@ -61,7 +61,7 @@ client.on('ready', () => {
 });
 
 client.on('message', message => {
-    if (message.content === 'l') {
+    if (message.content === 'l' && message.author === '330788051016220676') {
         if (i == lenList+2){
             i = 2;
             message.reply("Possono finalizzare i seguenti utenti: " + listPlayers[i-2] + " , " + listPlayers[i-1] + " , " + listPlayers[i]);
