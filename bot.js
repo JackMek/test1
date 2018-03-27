@@ -63,8 +63,8 @@ client.on('ready', () => {
 client.on('message', message => {
     if (message.content === 'list') {
        
-            message.reply(listPlayers[i-2]) 
-            message.reply(listPlayers[i-1])
+            message.reply(listPlayers[i-2]);
+            message.reply(listPlayers[i-1]);
             message.reply(listPlayers[i]);
       
   	}
