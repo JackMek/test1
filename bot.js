@@ -62,17 +62,17 @@ client.on('ready', () => {
 
 client.on('message', message => {
     if (message.content === 'l') {
-        if (i == lenList + 3){
+        if (i == 52){
             i = 2;
             message.reply("Possono finalizzare i seguenti utenti: " + listPlayers[i-2] + " , " + listPlayers[i-1] + " , " + listPlayers[i]);
         }
-        else if (i == lenList + 2){
-            message.reply("Possono finalizzare i seguenti utenti: " + listPlayers[i-lenList-1] + " , " + listPlayers[i-lenList-2] + " , " + listPlayers[i-2]);
-            i -= lenList;
+        else if (i == 51){
+            message.reply("Possono finalizzare i seguenti utenti: " + listPlayers[49] + " , " + listPlayers[0] + " , " + listPlayers[1]);
+            i -= 46;
         }
-        else if (i == lenList + 1){
-            message.reply("Possono finalizzare i seguenti utenti: " + listPlayers[i-lenList-1] + " , " + listPlayers[i-1] + " , " + listPlayers[i]);
-            i -= lenList;
+        else if (i == 50){
+            message.reply("Possono finalizzare i seguenti utenti: " + listPlayers[48] + " , " + listPlayers[49] + " , " + listPlayers[0]);
+            i -= 46;
         }
         else{
             message.reply("Possono finalizzare i seguenti utenti: " + listPlayers[i-2] + " , " + listPlayers[i-1] + " , " + listPlayers[i]);
