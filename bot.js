@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const channelBot = channels.get("id", "428119349048639488")
+const CHANNEL_ID = 428119349048639488;
 
 var listPlayers = [
 'Insidious'
@@ -62,21 +62,21 @@ client.on('ready', () => {
 });
 
 client.on('message', message => {
-    if (message.content === 'l') {
+    if (message.content === 'l' && message.channel.id === CHANNEL_ID) {
         if (i == lenList+2){
             i = 2;
-            message.channelBot.send("Possono finalizzare i seguenti utenti: " + listPlayers[i-2] + " , " + listPlayers[i-1] + " , " + listPlayers[i]);
+            message.reply("Possono finalizzare i seguenti utenti: " + listPlayers[i-2] + " , " + listPlayers[i-1] + " , " + listPlayers[i]);
         }
         else if (i == lenList+1){
-            message.channelBot.send("Possono finalizzare i seguenti utenti: " + listPlayers[lenList-1] + " , " + listPlayers[0] + " , " + listPlayers[1]);
+            message.reply("Possono finalizzare i seguenti utenti: " + listPlayers[lenList-1] + " , " + listPlayers[0] + " , " + listPlayers[1]);
             i = 4;
         }
         else if (i == lenList){
-            message.channelBot.send("Possono finalizzare i seguenti utenti: " + listPlayers[lenList-2] + " , " + listPlayers[lenList-1] + " , " + listPlayers[0]);
+            message.reply("Possono finalizzare i seguenti utenti: " + listPlayers[lenList-2] + " , " + listPlayers[lenList-1] + " , " + listPlayers[0]);
             i = 3;
         }
         else{
-            message.channelBot.send("Possono finalizzare i seguenti utenti: " + listPlayers[i-2] + " , " + listPlayers[i-1] + " , " + listPlayers[i]);
+            message.reply("Possono finalizzare i seguenti utenti: " + listPlayers[i-2] + " , " + listPlayers[i-1] + " , " + listPlayers[i]);
             i += 3;
         }
   	}
