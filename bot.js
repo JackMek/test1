@@ -68,11 +68,11 @@ client.on('message', message => {
         }
         else if (i == lenList + 2){
             message.reply("Possono finalizzare i seguenti utenti: " + listPlayers[i-lenList-1] + " , " + listPlayers[i-lenList-2] + " , " + listPlayers[i-2]);
-            i = 2;
+            i -= lenList;
         }
         else if (i == lenList + 1){
             message.reply("Possono finalizzare i seguenti utenti: " + listPlayers[i-lenList-1] + " , " + listPlayers[i-1] + " , " + listPlayers[i]);
-            i = 2;
+            i -= lenList;
         }
         else{
             message.reply("Possono finalizzare i seguenti utenti: " + listPlayers[i-2] + " , " + listPlayers[i-1] + " , " + listPlayers[i]);
