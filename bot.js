@@ -54,6 +54,7 @@ var listPlayers = [
 ,'Aria Curran'];
 
 var i = 2;
+var lenList = listPlayers.length -1;
 
 client.on('ready', () => {
     console.log('I am ready!');
@@ -61,10 +62,22 @@ client.on('ready', () => {
 
 client.on('message', message => {
     if (message.content === 'list') {
-        //if (i>49)
-           // i=2;
-    	message.reply(listPlayers[i-2] + ' , ' listPlayers[i-1] + ' , ' listPlayers[i]);
-        //i+=3;
+        if (i == lenList + 3){
+            i = 2;
+            message.reply(listPlayers[i-2] + ' , ' listPlayers[i-1] + ' , ' listPlayers[i]);
+        }
+        else if (i == lenList + 2){
+            message.reply(listPlayers[i-lenList-1] + ' , ' listPlayers[i-lenList-2] + ' , ' listPlayers[i-2]);
+            i = 2;
+        }
+        else if (i == lenList + 1){
+            message.reply(listPlayers[i-lenList-1] + ' , ' listPlayers[i-1] + ' , ' listPlayers[i]);
+            i = 2;
+        }
+        else{
+            message.reply(listPlayers[i-2] + ' , ' listPlayers[i-1] + ' , ' listPlayers[i]);
+            i+=3;
+        }
   	}
 });
 
