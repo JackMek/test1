@@ -63,8 +63,8 @@ client.on('message', message => {
     if (message.content === 'list') {
         if (i>49)
             i=2;
-    	message.reply(listPlayers[i-2] + listPlayers[i-1] + listPlayers[i]);
-        i++;
+    	message.reply(listPlayers[i-2] + ' , ' listPlayers[i-1] + ' , ' listPlayers[i]);
+        i+=3;
   	}
 });
 
