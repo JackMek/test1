@@ -54,14 +54,14 @@ var listPlayers = [
 ,'Aria Curran'];
 
 var i = 2;
-var lenList = listPlayers.length -1;
+var lenList = listPlayers.length;
 
 client.on('ready', () => {
     console.log('I am ready!');
 });
 
 client.on('message', message => {
-    if (message.content === 'list') {
+    if (message.content === 'l') {
         if (i == lenList + 3){
             i = 2;
             message.reply("Possono finalizzare i seguenti utenti: " + listPlayers[i-2] + " , " + listPlayers[i-1] + " , " + listPlayers[i]);
