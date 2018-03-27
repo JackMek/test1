@@ -64,18 +64,18 @@ client.on('message', message => {
     if (message.content === 'list') {
         if (i == lenList + 3){
             i = 2;
-            message.reply(listPlayers[i-2] + ' , ' listPlayers[i-1] + ' , ' listPlayers[i]);
+            message.reply("Possono finalizzare i seguenti utenti: " + listPlayers[i-2] + " , " listPlayers[i-1] + " , " listPlayers[i]);
         }
         else if (i == lenList + 2){
-            message.reply(listPlayers[i-lenList-1] + ' , ' listPlayers[i-lenList-2] + ' , ' listPlayers[i-2]);
+            message.reply("Possono finalizzare i seguenti utenti: " + listPlayers[i-lenList-1] + " , " listPlayers[i-lenList-2] + " , " listPlayers[i-2]);
             i = 2;
         }
         else if (i == lenList + 1){
-            message.reply(listPlayers[i-lenList-1] + ' , ' listPlayers[i-1] + ' , ' listPlayers[i]);
+            message.reply("Possono finalizzare i seguenti utenti: " + listPlayers[i-lenList-1] + " , " listPlayers[i-1] + " , " listPlayers[i]);
             i = 2;
         }
         else{
-            message.reply(listPlayers[i-2] + ' , ' listPlayers[i-1] + ' , ' listPlayers[i]);
+            message.reply("Possono finalizzare i seguenti utenti: " + listPlayers[i-2] + " , " listPlayers[i-1] + " , " listPlayers[i]);
             i+=3;
         }
   	}
