@@ -14,7 +14,7 @@ var listPlayers = [
 ,'Wes'
 ,'Dessel Autem'
 ,'Maxwayne'
-,'Frenzen'
+,'Morvrin Jahar'
 ,'Rag MARINO'
 ,'Thunder'
 ,'MinandaXY'
