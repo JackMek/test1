@@ -62,7 +62,7 @@ client.on('ready', () => {
 });
 
 client.on('message', message => {
-    if (message.content === 'list') {
+    if (message.content.toLowerCase() === 'list') {
         if (i == lenList+2){
             i = 2;
             client.channels.get(channelID).send("@everyone \n Possono finalizzare i seguenti utenti: \n 1° - " + listPlayers[i-2] + " \n 2° - " + listPlayers[i-1] + " \n 3° - " + listPlayers[i]);
