@@ -54,7 +54,7 @@ var listPlayers = [
 ,'tompson mods'
 ,'Wes'];
 
-var i = 14;
+var i;
 var lenList = listPlayers.length;
 
 client.on('ready', () => {
@@ -63,6 +63,9 @@ client.on('ready', () => {
 
 client.on('message', message => {
     if (message.content.toLowerCase() === 'list') {
+        
+        let i = args[0];
+        
         if (i == lenList+2){
             i = 2;
             client.channels.get(channelID).send("@everyone \n Possono finalizzare i seguenti utenti: \n 1° - " + listPlayers[i-2] + " \n 2° - " + listPlayers[i-1] + " \n 3° - " + listPlayers[i]);
