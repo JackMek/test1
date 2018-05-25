@@ -55,6 +55,7 @@ var listPlayers = [
 ,'Wes'];
 
 var i;
+var data;
 var lenList = listPlayers.length;
 
 client.on('ready', () => {
@@ -65,21 +66,22 @@ client.on('message', message => {
     if (message.content.toLowerCase() === 'list') {
         
         let i = args[0];
+        let data = Date.now();
         
         if (i == lenList+2){
             i = 2;
-            client.channels.get(channelID).send("@everyone \n Possono finalizzare i seguenti utenti: \n 1° - " + listPlayers[i-2] + " \n 2° - " + listPlayers[i-1] + " \n 3° - " + listPlayers[i]);
+            client.channels.get(channelID).send("@everyone \n Oggi " + data + "\n Possono finalizzare i seguenti utenti: \n 1° - " + listPlayers[i-2] + " \n 2° - " + listPlayers[i-1] + " \n 3° - " + listPlayers[i]);
         }
         else if (i == lenList+1){
-            client.channels.get(channelID).send("@everyone \n Possono finalizzare i seguenti utenti: \n 1° - " + listPlayers[lenList-1] + " \n 2° - " + listPlayers[0] + " \n 3° - " + listPlayers[1]);
+            client.channels.get(channelID).send("@everyone \n Oggi " + data + "\n Possono finalizzare i seguenti utenti: \n 1° - " + listPlayers[lenList-1] + " \n 2° - " + listPlayers[0] + " \n 3° - " + listPlayers[1]);
             i = 4;
         }
         else if (i == lenList){
-            client.channels.get(channelID).send("@everyone \n Possono finalizzare i seguenti utenti: \n 1° - " + listPlayers[lenList-2] + " \n 2° - " + listPlayers[lenList-1] + " \n 3° - " + listPlayers[0]);
+            client.channels.get(channelID).send("@everyone \n Oggi " + data + "\n Possono finalizzare i seguenti utenti: \n 1° - " + listPlayers[lenList-2] + " \n 2° - " + listPlayers[lenList-1] + " \n 3° - " + listPlayers[0]);
             i = 3;
         }
         else{
-            client.channels.get(channelID).send("@everyone \n Possono finalizzare i seguenti utenti: \n 1° - " + listPlayers[i-2] + " \n 2° - " + listPlayers[i-1] + " \n 3° - " + listPlayers[i]);
+            client.channels.get(channelID).send("@everyone \n Oggi " + data + "\n Possono finalizzare i seguenti utenti: \n 1° - " + listPlayers[i-2] + " \n 2° - " + listPlayers[i-1] + " \n 3° - " + listPlayers[i]);
             i += 3;
         }
   	}
