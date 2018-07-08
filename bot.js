@@ -54,7 +54,7 @@ var listPlayers = [
 ,'tompson mods'
 ,'Wes'];
 
-var i = 18;
+var i = 33;
 var lenList = listPlayers.length;
 
 client.on('ready', () => {
