@@ -7,7 +7,8 @@ var listPlayers = [
 ,'Aetereus'
 ,'AlexinhoM1lano'
 ,'Alfio'
-,'NewEntry'
+, 'New - Athenstankhan'
+
 ,'Anakin81'
 ,'AndyZ'
 ,'Aria Curran'
@@ -32,7 +33,7 @@ var listPlayers = [
 ,'Lukeluke'
 ,'Maxwayne'
 ,'MinandaXY'
-,'Morvrin Jahar'
+,'New-Feh Sans'
 ,'Mttmgg'
 ,'Nando1908'
 ,'OP1Kenobi'
@@ -54,7 +55,7 @@ var listPlayers = [
 ,'tompson mods'
 ,'Wes'];
 
-var i = 39;
+var i = 45;
 var lenList = listPlayers.length;
 
 client.on('ready', () => {
