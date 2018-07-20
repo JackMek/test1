@@ -7,7 +7,7 @@ var listPlayers = [
 ,'Aetereus'
 ,'AlexinhoM1lano'
 ,'Alfio'
-,'New - Athenstankhan,
+,'New - Athenstankhan',
 ,'Anakin81'
 ,'AndyZ'
 ,'Aria Curran'
