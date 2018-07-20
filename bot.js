@@ -54,10 +54,6 @@ var listPlayers = [
 ,'tompson mods'
 ,'Wes'];
 
-var fs = require('fs');
-var i = fs.readFileSync('conta.txt', 'utf8');
-
-//var i = 4;
 var lenList = listPlayers.length;
 
 client.on('ready', () => {
@@ -66,25 +62,26 @@ client.on('ready', () => {
 
 client.on('message', message => {
     if (message.content.toLowerCase() === 'list') {
-        if (i == lenList+2){
-            //i = 2;
-            fs.writeFileSync("conta.txt", "2");
-            client.channels.get(channelID).send("@everyone \n Possono finalizzare i seguenti utenti: \n 1° - " + listPlayers[i-2] + " \n 2° - " + listPlayers[i-1] + " \n 3° - " + listPlayers[i]);
+        
+        const args = message.content.slice(prefix.length).trim().split(/ +/g);
+        const command = args.shift().toLowerCase();
+        
+        let i = args[0];
+        
+         if (i == lenList+2){
+            client.channels.get(channelID).send("@everyone \n Possono finalizzare i seguenti utenti: \n 1° - " + listPlayers[0] + " \n 2° - " + listPlayers[1] + " \n 3° - " + listPlayers[2]);
         }
         else if (i == lenList+1){
             client.channels.get(channelID).send("@everyone \n Possono finalizzare i seguenti utenti: \n 1° - " + listPlayers[lenList-1] + " \n 2° - " + listPlayers[0] + " \n 3° - " + listPlayers[1]);
-            fs.writeFileSync("conta.txt", "4");
-            //i = 4;
+            client.channels.get(channelID).send("\n\n Prossimo valore da usare list 4");
         }
         else if (i == lenList){
             client.channels.get(channelID).send("@everyone \n Possono finalizzare i seguenti utenti: \n 1° - " + listPlayers[lenList-2] + " \n 2° - " + listPlayers[lenList-1] + " \n 3° - " + listPlayers[0]);
-            fs.writeFileSync("conta.txt", "3");
-            //i = 3;
+            client.channels.get(channelID).send("\n\n Prossimo valore da usare list 3");
         }
         else{
             client.channels.get(channelID).send("@everyone \n Possono finalizzare i seguenti utenti: \n 1° - " + listPlayers[i-2] + " \n 2° - " + listPlayers[i-1] + " \n 3° - " + listPlayers[i]);
-            i += 3;
-            fs.writeFileSync("conta.txt", i);
+            client.channels.get(channelID).send("\n\n Prossimo valore da usare list " + (i+3));
         }
   	}
 });
