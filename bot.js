@@ -66,11 +66,12 @@ client.on('message', message => {
     const command = args.shift().toLowerCase();
     let i = args[0];
     
-    if (command === 'list' && i !== 'undefined' && 0 < i < 53) {
+    if ((command === 'list') && (i !== 'undefined') && (0 < i < 53)) {
         
          if (i == lenList+2){
             client.channels.get(channelID).send("@everyone \n Possono finalizzare i seguenti utenti: \n 1° - " + listPlayers[0] + " \n 2° - " + listPlayers[1] + " \n 3° - " + listPlayers[2]);
-        }
+             client.channels.get(channelID).send("\n\n Prossimo valore da usare list 5");
+         }
         else if (i == lenList+1){
             client.channels.get(channelID).send("@everyone \n Possono finalizzare i seguenti utenti: \n 1° - " + listPlayers[lenList-1] + " \n 2° - " + listPlayers[0] + " \n 3° - " + listPlayers[1]);
             client.channels.get(channelID).send("\n\n Prossimo valore da usare list 4");
@@ -81,7 +82,8 @@ client.on('message', message => {
         }
         else{
             client.channels.get(channelID).send("@everyone \n Possono finalizzare i seguenti utenti: \n 1° - " + listPlayers[i-2] + " \n 2° - " + listPlayers[i-1] + " \n 3° - " + listPlayers[i]);
-            client.channels.get(channelID).send("\n\n Prossimo valore da usare list " + (i+3));
+            i = i+3;
+            client.channels.get(channelID).send("\n\n Prossimo valore da usare list " + i);
         }
   	}
 });
