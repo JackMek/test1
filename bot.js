@@ -61,12 +61,12 @@ client.on('ready', () => {
 });
 
 client.on('message', message => {
-    if (message.content.toLowerCase() === 'list') {
-        
-        const args = message.content.slice(prefix.length).trim().split(/ +/g);
-        const command = args.shift().toLowerCase();
-        
-        let i = args[0];
+    
+    const args = message.content.slice(prefix.length).trim().split(/ +/g);
+    const command = args.shift().toLowerCase();
+    let i = args[0];
+    
+    if (command === 'list' && i !== 'undefined' && 0 < i < 53) {
         
          if (i == lenList+2){
             client.channels.get(channelID).send("@everyone \n Possono finalizzare i seguenti utenti: \n 1° - " + listPlayers[0] + " \n 2° - " + listPlayers[1] + " \n 3° - " + listPlayers[2]);
