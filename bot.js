@@ -7,7 +7,7 @@ var listPlayers = [
 ,'Aetereus'
 ,'AlexinhoM1lano'
 ,'Alfio'
-,'New - Athenstankhan',
+,'Orzabal',
 ,'Anakin81'
 ,'AndyZ'
 ,'Aria Curran'
@@ -32,12 +32,12 @@ var listPlayers = [
 ,'Lukeluke'
 ,'Maxwayne'
 ,'MinandaXY'
-,'New-Feh Sans'
+,'Feh Sans'
 ,'Mttmgg'
 ,'Nando1908'
 ,'OP1Kenobi'
 ,'Pantegana'
-,'Popmauro'
+,'DocR'
 ,'Rag MARINO'
 ,'Raist'
 ,'Ric'
